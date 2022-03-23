@@ -89,13 +89,14 @@ class ManagerTest {
 
     }
 
+
+
     @Test
     public void shouldCloseIssue() {
 
         Issue issue = new Issue();
 
-        manager.update(1);
-
+        manager.close(6);
 
         assertEquals(false, issue.isOpened());
 
@@ -107,7 +108,7 @@ class ManagerTest {
 
         Issue issue = new Issue();
 
-        manager.update(7);
+        manager.open(5);
 
         assertEquals(true, issue.isOpened());
 

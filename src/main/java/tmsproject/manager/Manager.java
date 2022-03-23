@@ -57,22 +57,28 @@ public class Manager {
     }
 
 
-    public void update(int id) {
-
-        Issue issue = new Issue();
-
-        if (issue.getId() == id) {
-            if (issue.isOpened() == false) {
+    public void open(int id) {
+        for (Issue issue : repository.findAll()) {
+            if (issue.getId() == id && !issue.isOpened()) {
                 issue.setOpened(true);
-            }
-            else {
-                issue.setOpened(false);
-            }
-        }
+             }
 
+        }
     }
 
+    public boolean close(int id) {
+        for (Issue issue : repository.findAll()) {
+            if (issue.isOpened());
+
+        }
+        return false;
+    }
+
+
 }
+
+
+
 
 
 
