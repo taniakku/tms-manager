@@ -61,20 +61,20 @@ public class Manager {
         for (Issue issue : repository.findAll()) {
             if (issue.getId() == id && !issue.isOpened()) {
                 issue.setOpened(true);
-             }
+            }
 
         }
     }
 
-    public boolean close(int id) {
+    public void close(int id) {
         for (Issue issue : repository.findAll()) {
-            if (issue.isOpened());
+            if (issue.getId() == id && issue.isOpened()) {
+                issue.setOpened(false);
+            }
 
         }
-        return false;
+
     }
-
-
 }
 
 
