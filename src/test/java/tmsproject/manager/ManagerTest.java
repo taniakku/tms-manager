@@ -90,7 +90,6 @@ class ManagerTest {
     }
 
 
-
     @Test
     public void shouldCloseIssue() {
 
@@ -98,7 +97,9 @@ class ManagerTest {
 
         manager.close(6);
 
-        assertEquals(false, issue.isOpened());
+        boolean actual = sixth.isOpened();
+
+        assertEquals(false, actual);
 
 
     }
@@ -110,7 +111,9 @@ class ManagerTest {
 
         manager.open(5);
 
-        assertEquals(true, issue.isOpened());
+        boolean actual = fifth.isOpened();
+
+        assertEquals(true, actual);
 
 
     }
